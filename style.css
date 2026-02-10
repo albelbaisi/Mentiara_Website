@@ -1,16 +1,32 @@
-/* --- Variables --- */
+/* =========================================
+   MENTIARA BRAND COMPLIANCE SYSTEM
+   Update these variables to match app.mentiara.com
+   ========================================= */
 :root {
-    --primary: #2563EB;
-    --primary-dark: #1E40AF;
-    --secondary: #0F172A;
-    --text-gray: #64748B;
-    --bg-light: #F8FAFC;
-    --white: #FFFFFF;
-    --radius: 16px;
-    --shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
-    --font-head: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /* --- 1. BRAND COLORS (Match these to your App) --- */
+    --primary: #2563EB;       /* Main Action Button / Links (The "Gorients Blue") */
+    --primary-dark: #1E40AF;  /* Hover State for buttons */
+    --secondary: #0F172A;     /* Main Headings / Text (Usually Dark Navy or Black) */
+    --accent: #F59E0B;        /* Highlights / Badges (Optional) */
+    
+    /* --- 2. NEUTRALS (Backgrounds) --- */
+    --bg-light: #F8FAFC;      /* Light gray background for sections */
+    --white: #FFFFFF;         /* Card backgrounds */
+    --text-gray: #64748B;     /* Paragraph text */
+
+    /* --- 3. SHAPE & FORM (Match App UI) --- */
+    --radius: 12px;           /* How round are the corners? (Try 4px, 8px, or 12px) */
+    --shadow: 0 10px 30px -10px rgba(0,0,0,0.08); /* App depth */
+
+    /* --- 4. TYPOGRAPHY (Match App Fonts) --- */
+    /* If your app uses Roboto, change 'Outfit' to 'Roboto' below */
+    --font-head: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+/* =========================================
+   CORE STYLES (Responsive & Cross-Platform)
+   ========================================= */
 
 /* --- Base Reset --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,42 +38,72 @@ body {
     color: var(--secondary);
     line-height: 1.6;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased; /* Better text on Mac/iOS */
+    -webkit-font-smoothing: antialiased; /* iOS Smooth Rendering */
 }
 
-h1, h2, h3 { font-family: var(--font-head); line-height: 1.1; margin-bottom: 1rem; }
+h1, h2, h3 { 
+    font-family: var(--font-head); 
+    line-height: 1.1; 
+    margin-bottom: 1rem; 
+    color: var(--secondary);
+}
+
 p { color: var(--text-gray); margin-bottom: 1rem; }
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 ul { list-style: none; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* --- Buttons --- */
+/* --- Buttons (Inherits Brand Colors) --- */
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 14px 28px;
-    border-radius: 50px;
+    border-radius: 50px; /* Modern rounded pill shape */
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
+    cursor: pointer;
 }
-.btn-primary { background: var(--primary); color: var(--white); border: 2px solid var(--primary); }
-.btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-2px); }
 
-.btn-secondary { background: transparent; border: 2px solid var(--secondary); color: var(--secondary); }
-.btn-secondary:hover { background: var(--secondary); color: var(--white); transform: translateY(-2px); }
+.btn-primary { 
+    background: var(--primary); 
+    color: var(--white); 
+    border: 2px solid var(--primary); 
+}
+.btn-primary:hover { 
+    background: var(--primary-dark); 
+    border-color: var(--primary-dark); 
+    transform: translateY(-2px); 
+}
+
+.btn-secondary { 
+    background: transparent; 
+    border: 2px solid var(--secondary); 
+    color: var(--secondary); 
+}
+.btn-secondary:hover { 
+    background: var(--secondary); 
+    color: var(--white); 
+    transform: translateY(-2px); 
+}
 
 /* --- Navigation --- */
 .navbar {
     position: fixed; top: 0; width: 100%;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px); /* Apple-like glass effect */
     z-index: 1000;
     padding: 16px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); font-family: var(--font-head); letter-spacing: -0.5px; }
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+    font-family: var(--font-head); 
+    letter-spacing: -0.5px; 
+}
 
 .nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a:not(.btn-primary) { font-weight: 500; font-size: 0.95rem; }
@@ -68,24 +114,27 @@ ul { list-style: none; }
     min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at 50% 50%, #EFF6FF 0%, #FFFFFF 70%);
+    /* Subtle gradient matching brand feel */
+    background: radial-gradient(circle at 50% 50%, var(--bg-light) 0%, var(--white) 70%);
     padding: 120px 20px 60px;
 }
 .hero-content { max-width: 800px; }
-.hero h1 { font-size: 4rem; letter-spacing: -1.5px; color: var(--secondary); margin-bottom: 24px; }
+.hero h1 { font-size: 4rem; letter-spacing: -1.5px; margin-bottom: 24px; }
 .hero p { font-size: 1.25rem; max-width: 600px; margin: 0 auto 40px; }
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
 .badge {
-    background: #DBEAFE; color: var(--primary);
+    background: #DBEAFE; /* Light Blue Token */
+    color: var(--primary);
     padding: 8px 16px; border-radius: 20px;
     font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
     margin-bottom: 24px; display: inline-block;
 }
 
-/* --- Features & Age Grid --- */
+/* --- Sections & Cards --- */
 .section { padding: 100px 0; }
 .bg-light { background: var(--bg-light); }
-.section-header { text-align: center; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.section-header { text-align: center; margin-bottom: 60px; max-width: 600px; margin: 0 auto 60px auto; }
 .section-header h2 { font-size: 2.5rem; }
 
 .grid-3 {
@@ -97,12 +146,15 @@ ul { list-style: none; }
 .card, .age-card {
     background: var(--white);
     padding: 40px 32px;
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Uses Brand Radius */
     box-shadow: var(--shadow);
     border: 1px solid rgba(0,0,0,0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover, .age-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12); }
+.card:hover, .age-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12); 
+}
 .icon-header, .age-icon { font-size: 2.5rem; margin-bottom: 20px; }
 .card h3, .age-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
 
@@ -136,7 +188,10 @@ footer { background: var(--secondary); color: var(--white); padding: 80px 0 30px
 @media (max-width: 768px) {
     /* Navigation Mobile */
     .hamburger { display: block; z-index: 1001; }
-    .hamburger span { display: block; width: 26px; height: 3px; margin: 5px; background: var(--secondary); transition: 0.3s; border-radius: 2px; }
+    .hamburger span { 
+        display: block; width: 26px; height: 3px; margin: 5px; 
+        background: var(--secondary); transition: 0.3s; border-radius: 2px; 
+    }
     
     /* Toggle Animation */
     .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
