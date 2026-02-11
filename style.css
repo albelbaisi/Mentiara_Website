@@ -9,6 +9,7 @@
     --font-head: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --radius: 12px;
+    --shadow-hover: 0 20px 25px -5px rgba(0,0,0,0.1);
 }
 
 /* --- Base --- */
@@ -53,6 +54,24 @@ ul { list-style: none; }
 .blob-1 { top: -100px; left: -100px; background: #DBEAFE; }
 .blob-2 { bottom: -100px; right: -100px; background: #F3E8FF; animation-delay: 5s; }
 
+/* --- VIDEO WRAPPER (Responsive 16:9) --- */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    background: #000;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
 /* --- Cards & Grid --- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .feature-card { background: white; padding: 40px 30px; border-radius: var(--radius); border: 1px solid #F1F5F9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
@@ -71,55 +90,17 @@ ul { list-style: none; }
 .stat-num { display: block; font-size: 3rem; font-weight: 800; color: #38BDF8; }
 .stat-label { font-size: 0.9rem; color: #94A3B8; }
 
-/* --- IMPROVED FAQ ACCORDION STYLE --- */
+/* --- FAQ Accordion --- */
 .faq-container { display: flex; flex-direction: column; gap: 16px; }
-
-.faq-item {
-    background: white;
-    border-radius: var(--radius);
-    border: 1px solid #E2E8F0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
+.faq-item { background: white; border-radius: var(--radius); border: 1px solid #E2E8F0; overflow: hidden; transition: all 0.3s ease; }
 .faq-item:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    background: white;
-    border: none;
-    padding: 24px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--secondary);
-    cursor: pointer;
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--font-head);
-}
-
-/* The Plus Icon */
-.icon-plus {
-    position: relative; width: 16px; height: 16px;
-    transition: transform 0.3s ease;
-}
-.icon-plus::before, .icon-plus::after {
-    content: ''; position: absolute; background: var(--primary);
-    top: 50%; left: 50%; transform: translate(-50%, -50%);
-}
+.faq-question { width: 100%; text-align: left; background: white; border: none; padding: 24px; font-size: 1.1rem; font-weight: 600; color: var(--secondary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-head); }
+.icon-plus { position: relative; width: 16px; height: 16px; transition: transform 0.3s ease; }
+.icon-plus::before, .icon-plus::after { content: ''; position: absolute; background: var(--primary); top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .icon-plus::before { width: 16px; height: 2px; }
 .icon-plus::after { width: 2px; height: 16px; }
-
-/* Active State for Icon */
 .faq-item.active .icon-plus { transform: rotate(45deg); }
-.faq-item.active .icon-plus::before, .faq-item.active .icon-plus::after { background: var(--primary-dark); }
-
-/* The Answer Animation */
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-}
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0, 1, 0, 1); }
 .faq-content { padding: 0 24px 24px 24px; color: var(--text-body); font-size: 1rem; line-height: 1.7; }
 
 /* --- Footer --- */
