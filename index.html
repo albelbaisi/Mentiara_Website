@@ -3,216 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mentiara: A premier digital platform for personal growth, mental clarity, and AI-driven behavioral development.">
-    <title>Mentiara | The OS for Human Potential</title>
+    <meta name="description" content="Mentiara: The AI-Powered Behavioral Development Platform. Enhancing mental resilience and emotional intelligence through science.">
+    <title>Mentiara | Transforming Behavior Through Innovation</title>
     
     <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Mentiara",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Web",
-      "publisher": { "@type": "Organization", "name": "Gorients Technologies" }
-    }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span><i class="fa-solid fa-shield-halved"></i> Enterprise-Grade Data Privacy</span>
+            <div class="top-links">
+                <a href="mailto:support@mentiara.com">Partner with us</a>
+                <span>|</span>
+                <a href="#">Investors</a>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Mentiara.</a>
-            <div class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></div>
+            <a href="#" class="logo">
+                <span class="logo-symbol">M</span>entiara<span class="logo-dot">.</span>
+            </a>
+            
+            <div class="hamburger" id="hamburger-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
             <ul class="nav-links" id="nav-links">
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#ecosystem">Solutions</a></li>
+                <li><a href="#corporate">Corporate</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#video-story">The Story</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#science">Science</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li class="mobile-separator"></li>
-                <li><a href="https://app.mentiara.com/login" class="nav-link-login" target="_blank">Log in</a></li>
-                <li><a href="https://app.mentiara.com/register" class="btn-primary" target="_blank">Get Started</a></li>
+                <li class="nav-actions">
+                    <a href="https://app.mentiara.com/login" class="nav-link-login" target="_blank">Log In</a>
+                    <a href="https://app.mentiara.com/register" class="btn-primary small" target="_blank">Get Started</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-
-        <div class="container hero-content fade-in">
-            <div class="badge-pill">
-                <span class="badge-dot"></span><span>Introducing Mintyara for Kids</span>
+        <div class="container hero-grid">
+            <div class="hero-text fade-in">
+                <div class="tagline"><i class="fa-solid fa-bolt"></i> AI-Driven Behavioral Development</div>
+                <h1>The Operating System for <span class="highlight">Human Potential.</span></h1>
+                <p class="hero-sub">
+                    Mentiara bridges the gap between information and transformation. We combine <strong>neuroscience</strong>, <strong>AI analysis</strong>, and <strong>gamification</strong> to build resilience and emotional intelligence.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://app.mentiara.com/register" class="btn-primary" target="_blank">Start Free Assessment</a>
+                    <a href="#video-section" class="btn-outline"><i class="fa-solid fa-play"></i> Watch Overview</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>94%</strong>
+                        <span>Profile Accuracy</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>10k+</strong>
+                        <span>Behavioral Patterns</span>
+                    </div>
+                </div>
             </div>
-            <h1>Bridge the gap between <br><span class="text-gradient">information & transformation.</span></h1>
-            <p class="hero-subtext">
-                Mentiara is an orchestrator of change—an AI-driven platform that empowers you to master your mindset and navigate modern self-improvement with confidence.
-            </p>
-            <div class="hero-buttons">
-                <a href="https://app.mentiara.com/register" class="btn-primary" target="_blank">Start Free Profile</a>
-                <a href="#video-story" class="btn-glass">Watch the Film <span class="play-icon">▶</span></a>
-            </div>
-            <div class="trust-indicator">
-                <p>Trusted by educators, families, and professionals worldwide</p>
+            <div class="hero-visual fade-in">
+                <div class="video-card">
+                    <img src="https://img.youtube.com/vi/QZKZ7mSSWzw/maxresdefault.jpg" alt="Mentiara AI" class="video-thumb">
+                    <a href="#video-section" class="play-btn-overlay">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="float-card card-1">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Neuroplasticity Engine</span>
+                </div>
+                <div class="float-card card-2">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Real-time Analytics</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="video-story" class="section">
-        <div class="container text-center">
+    <div class="logo-strip">
+        <div class="container">
+            <p>Empowering individuals and organizations worldwide</p>
+            <div class="logos">
+                <span class="partner-logo">Google for Education</span>
+                <span class="partner-logo">Microsoft Startups</span>
+                <span class="partner-logo">Psychology Today</span>
+                <span class="partner-logo">Gorients Tech</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="methodology" class="section bg-light">
+        <div class="container">
             <div class="section-header fade-up">
-                <h2>Meet Mentia.</h2>
-                <p>Join Liam and Dr. Nova on a journey to discover why emotional awareness is a superpower.</p>
+                <h2>Grounded in Science.</h2>
+                <p>Our platform leverages the latest advancements in behavioral psychology and AI.</p>
             </div>
             
-            <div class="video-wrapper fade-up">
+            <div class="method-grid">
+                <div class="method-card fade-up">
+                    <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Neuroplasticity</h3>
+                    <p>We utilize the brain's ability to reorganize itself. By engaging with repeated AI-designed challenges, users form new neural connections and habits.</p>
+                </div>
+                <div class="method-card fade-up">
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI-Driven Analysis</h3>
+                    <p>Our algorithms track reaction times and decision patterns to generate a personalized "Growth Roadmap" unique to your behavioral DNA.</p>
+                </div>
+                <div class="method-card fade-up">
+                    <div class="icon-box"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Habit Formation</h3>
+                    <p>Through "Gamified Interactive Challenges," we turn tedious self-improvement into an engaging loop of trigger, action, and reward.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-section" class="section section-dark">
+        <div class="container">
+            <div class="video-intro text-center fade-up">
+                <h2>See Mentiara in Action</h2>
+                <p>Join Dr. Nova and Liam as they explore the power of emotional awareness.</p>
+            </div>
+            <div class="cinema-wrapper fade-up">
                 <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/QZKZ7mSSWzw" 
-                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/QZKZ7mSSWzw?autoplay=1><img src=https://img.youtube.com/vi/QZKZ7mSSWzw/maxresdefault.jpg alt='Mentiara Video'><span>▶</span></a>"
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/QZKZ7mSSWzw?rel=0" 
+                    title="Mentiara Explainer Video" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                    title="Mentiara Explainer Video">
+                    allowfullscreen>
                 </iframe>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section bg-gradient-light">
+    <section id="ecosystem" class="section">
         <div class="container">
             <div class="section-header fade-up">
-                <h2>Why Mentiara?</h2>
-                <p>A premier digital platform dedicated to empowering personal growth.</p>
+                <h2>A Unified Ecosystem for Growth.</h2>
+                <p>Tailored solutions for every stage of development.</p>
+            </div>
+
+            <div class="ecosystem-grid">
+                <div class="solution-card mintyara fade-up">
+                    <div class="card-badge">For Ages 7-12</div>
+                    <div class="card-img-holder">
+                        <img src="images/joy.jpg" alt="Mintyara Joy" onerror="this.src='https://placehold.co/600x400/FFD700/FFFFFF?text=Mintyara+Adventure'">
+                    </div>
+                    <div class="card-body">
+                        <h3>Mintyara Adventure</h3>
+                        <p>A "Gym for the Brain." Kids embark on treasure hunts with characters like <strong>Joy</strong> to build empathy and patience.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> Gamified Learning</li>
+                            <li><i class="fa-solid fa-check"></i> Emotional Regulation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="solution-card pro fade-up">
+                    <div class="card-badge dark">For Ages 13+ & Adults</div>
+                    <div class="card-img-holder">
+                        <img src="images/courage.jpg" alt="Mentiara Pro" onerror="this.src='https://placehold.co/600x400/2563EB/FFFFFF?text=Mentiara+Pro'">
+                    </div>
+                    <div class="card-body">
+                        <h3>Mentiara Professional</h3>
+                        <p>Advanced tools for leadership, conflict resolution, and strategic decision-making. Perfect for students and professionals.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check"></i> Deep Behavioral Analytics</li>
+                            <li><i class="fa-solid fa-check"></i> Career Soft Skills</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="corporate" class="section bg-light corporate-section">
+        <div class="container">
+            <div class="corporate-layout">
+                <div class="corp-text fade-up">
+                    <span class="pre-header">For Organizations</span>
+                    <h2>Empower Your Workforce.</h2>
+                    <p>Companies use Mentiara to enhance employee performance and mental resilience through customized training solutions.</p>
+                    <div class="corp-stats">
+                        <div class="c-stat">
+                            <strong>30%</strong> Increase in decision speed
+                        </div>
+                        <div class="c-stat">
+                            <strong>40%</strong> Increase in emotional IQ
+                        </div>
+                    </div>
+                    <a href="mailto:corporate@mentiara.com" class="btn-primary">Request Corporate Demo</a>
+                </div>
+                <div class="corp-visual fade-up">
+                    <div class="dashboard-mockup">
+                        <div class="dash-header"></div>
+                        <div class="dash-row"></div>
+                        <div class="dash-row"></div>
+                        <div class="dash-graph"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo light">Mentiara.</a>
+                    <p>The world’s leading AI-powered behavioral development platform.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="nav-col">
+                        <h4>Platform</h4>
+                        <a href="#methodology">Science</a>
+                        <a href="#ecosystem">Solutions</a>
+                        <a href="https://app.mentiara.com/login">Login</a>
+                    </div>
+                    <div class="nav-col">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Investors</a>
+                    </div>
+                    <div class="nav-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="grid-3">
-                <div class="feature-card fade-up">
-                    <div class="card-icon-bg blue">🧠</div>
-                    <h3>Expert Insights</h3>
-                    <p>Stay ahead with content curated by experts. We leverage neuroscience and behavioral psychology to provide deep-dive analyses.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="card-icon-bg purple">⚡</div>
-                    <h3>Actionable Resources</h3>
-                    <p>We don't just provide information; we provide tools. Gamified missions test decision-making and patience in real-world simulations.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="card-icon-bg orange">🤝</div>
-                    <h3>Community Focused</h3>
-                    <p>Join a network striving for holistic success. Committed to ethical AI, ensuring your journey is safe, private, and responsible.</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mentiara. All rights reserved.</p>
+                <p class="powered-by">Powered by <strong>Gorients Technologies</strong></p>
             </div>
-
-            <div class="quote-box fade-up">
-                <p>
-                    "Mentiara is not just a startup, but an <strong>orchestrator of change</strong>. We bridge the gap between information and transformation."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="solutions" class="section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <h2>Tailored for every stage of life.</h2>
-                <p>One platform, intelligent enough to adapt to any age group.</p>
-            </div>
-            <div class="grid-3">
-                <div class="profile-card fade-up">
-                    <div class="profile-image-wrapper">
-                        <img src="images/joy.jpg" alt="Joy Character" class="profile-img" onerror="this.src='https://placehold.co/400x300/FFD700/FFFFFF?text=Joy'">
-                    </div>
-                    <div class="profile-content">
-                        <h3>Mintyara <span class="age-tag">Ages 7-12</span></h3>
-                        <p>A "gym for your brain". Meet <strong>Joy</strong> and embark on a treasure hunt that teaches empathy and confidence.</p>
-                    </div>
-                </div>
-                
-                <div class="profile-card fade-up">
-                    <div class="profile-image-wrapper">
-                        <img src="images/focus.jpg" alt="Focus Character" class="profile-img" onerror="this.src='https://placehold.co/400x300/4ADE80/FFFFFF?text=Focus'">
-                    </div>
-                    <div class="profile-content">
-                        <h3>Mentiara Teens <span class="age-tag">Ages 13-19</span></h3>
-                        <p>Guided by <strong>Focus</strong>. A safe space to navigate identity, peer pressure, and academic stress without judgment.</p>
-                    </div>
-                </div>
-                
-                <div class="profile-card fade-up">
-                    <div class="profile-image-wrapper">
-                        <img src="images/courage.jpg" alt="Courage Character" class="profile-img" onerror="this.src='https://placehold.co/400x300/F87171/FFFFFF?text=Courage'">
-                    </div>
-                    <div class="profile-content">
-                        <h3>Mentiara Pro <span class="age-tag">Ages 20+</span></h3>
-                        <p>Embody <strong>Courage</strong>. Master leadership, negotiation, and conflict resolution with AI-driven insights.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="science" class="section section-dark">
-        <div class="container text-center">
-            <div class="fade-up">
-                <h2>Built on Science. Secured by Privacy.</h2>
-                <p class="text-light">Mentiara is grounded in the Big Five personality traits and Cognitive Behavioral Therapy (CBT) principles.</p>
-                <div class="stats-grid">
-                    <div class="stat"><span class="stat-num">94%</span><span class="stat-label">Accuracy</span></div>
-                    <div class="stat"><span class="stat-num">10k+</span><span class="stat-label">Patterns</span></div>
-                    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Encrypted</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="section bg-light">
-        <div class="container" style="max-width: 800px;">
-            <div class="section-header fade-up">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-container fade-up">
-                <div class="faq-item">
-                    <button class="faq-question"><span>How does the assessment work?</span><span class="icon-plus"></span></button>
-                    <div class="faq-answer"><div class="faq-content"><p>Mentiara uses an adaptive engine. Questions change based on your previous answers, building a highly accurate profile in under 10 minutes.</p></div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question"><span>Is it suitable for schools?</span><span class="icon-plus"></span></button>
-                    <div class="faq-answer"><div class="faq-content"><p>Yes. Our "Group Dynamics" mode allows teachers to understand classroom behavior styles and foster better teamwork.</p></div></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question"><span>Is my data private?</span><span class="icon-plus"></span></button>
-                    <div class="faq-answer"><div class="faq-content"><p>Absolutely. Powered by Gorients Technologies, we use enterprise-grade encryption and never sell your data.</p></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <a href="#" class="logo-footer">Mentiara.</a>
-                <p>Powered by <strong>Gorients Technologies</strong></p>
-            </div>
-            <div class="footer-col">
-                <a href="https://app.mentiara.com/login" target="_blank">Login</a>
-                <a href="https://app.mentiara.com/register" target="_blank">Register</a>
-            </div>
-            <div class="footer-col">
-                <a href="mailto:support@mentiara.com">Contact</a>
-                <a href="#">Privacy</a>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 Mentiara. All rights reserved.
         </div>
     </footer>
 

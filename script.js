@@ -1,59 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- Mobile Menu Logic ---
+    // Mobile Menu Toggle
     const hamburger = document.getElementById('hamburger-btn');
     const navLinks = document.getElementById('nav-links');
-    
+
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
+    // Close menu when clicking link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
         });
     });
 
-    // --- Rich FAQ Accordion Logic ---
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-
-        question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // 1. Close all other items (Accordion style)
-            faqItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-answer').style.maxHeight = null;
-            });
-
-            // 2. Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-                // Calculate exact height for smooth animation
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                item.classList.remove('active');
-                answer.style.maxHeight = null;
-            }
-        });
-    });
-
-    // --- Scroll Animations ---
+    // Scroll Animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .fade-up').forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
+    });
 });
