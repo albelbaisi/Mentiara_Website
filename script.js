@@ -1,29 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Mobile Menu Toggle ---
+    // --- Mobile Menu Logic ---
     const hamburger = document.getElementById('hamburger-btn');
     const navLinks = document.getElementById('nav-links');
-    const navItems = navLinks.querySelectorAll('a');
-
+    
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-visible');
+        navLinks.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
 
     // Close menu when a link is clicked
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navLinks.classList.remove('mobile-visible');
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
             hamburger.classList.remove('active');
         });
     });
 
-    // --- Scroll Animations ---
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // --- Rich FAQ Accordion Logic ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
 
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // 1. Close all other items (Accordion style)
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // 2. Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+                // Calculate exact height for smooth animation
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                item.classList.remove('active');
+                answer.style.maxHeight = null;
+            }
+        });
+    });
+
+    // --- Scroll Animations ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -31,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    const animatedElements = document.querySelectorAll('.fade-in, .fade-up');
-    animatedElements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .fade-up').forEach(el => observer.observe(el));
 });
